@@ -1,5 +1,7 @@
 # bpmn-js-cli-modeling-dsl
 
+[![Build Status](https://travis-ci.org/nikku/bpmn-js-cli-modeling-dsl.svg?branch=master)](https://travis-ci.org/nikku/bpmn-js-cli-modeling-dsl)
+
 A modeling DSL (domain specific language) for [bpmn-js](https://github.com/bpmn-io/bpmn-js), built on top of [bpmn-js-cli](https://github.com/bpmn-io/bpmn-js-cli).
 
 
