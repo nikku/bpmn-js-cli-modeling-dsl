@@ -1,6 +1,6 @@
 {
   "name": "bpmn-js-cli-modeling-dsl",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A modeling dsl plug-in for bpmn-js-cli",
   "scripts": {
     "all": "run-s lint test",
