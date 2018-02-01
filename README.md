@@ -1,15 +1,15 @@
 # bpmn-js-cli-modeling-dsl
 
-A modeling DSL (domain specific language) for [bpmn-js](https://github.com/bpmn-io/bpmn-js), built on top of [bpmn-js-cli](https://github.com/Nikku/bpmn-js-cli).
+A modeling DSL (domain specific language) for [bpmn-js](https://github.com/bpmn-io/bpmn-js), built on top of [bpmn-js-cli](https://github.com/bpmn-io/bpmn-js-cli).
 
 
 ## Usage
 
-Use the extension for [bpmn-js-cli](https://github.com/Nikku/bpmn-js-cli) to quickly model simple processes.
+Use the extension for [bpmn-js-cli](https://github.com/bpmn-io/bpmn-js-cli) to quickly model simple processes.
 
 To model this process:
 
-<img src="https://raw.githubusercontent.com/Nikku/bpmn-js-cli-modeling-dsl/master/docs/model.png" style="max-width: 100%; box-shadow: 1px 1px 10px 5px rgba(143,143,143,1);" />
+![example BPMN diagram](./resources/model.png)
 
 simply execut the following command
 
