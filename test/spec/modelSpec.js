@@ -1,36 +1,31 @@
 'use strict';
 
-var TestHelper = require('bpmn-js/test/TestHelper'),
-    Matchers = require('bpmn-js/test/Matchers');
+require('../test-helper');
 
-/* global bootstrapBpmnJS, inject */
-
-
-var _ = require('lodash');
+/* global bootstrapModeler, inject */
 
 var fs = require('fs');
 
 var modelingModule = require('bpmn-js/lib/features/modeling'),
-    drawModule = require('bpmn-js/lib/draw'),
+    coreModule = require('bpmn-js/lib/core'),
     cliModelModule = require('../../');
 
 
 describe('cli', function() {
 
-  beforeEach(Matchers.addDeepEquals);
-
-
   var diagramXML = fs.readFileSync('resources/start.bpmn', 'utf-8');
 
-  var testModules = [ drawModule, cliModelModule, modelingModule ];
-
-  beforeEach(bootstrapBpmnJS(diagramXML, {
-    modules: testModules
+  beforeEach(bootstrapModeler(diagramXML, {
+    modules: [
+      coreModule,
+      cliModelModule,
+      modelingModule
+    ]
   }));
 
 
   it('should register model() command', inject(function(cli) {
-    expect(cli.model).toBeDefined();
+    expect(cli.model).to.exist;
   }));
 
 
