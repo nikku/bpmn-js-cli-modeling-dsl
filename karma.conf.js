@@ -1,9 +1,11 @@
 module.exports = function(karma) {
   karma.set({
 
-    basePath: '../../',
-
-    frameworks: [ 'browserify', 'jasmine' ],
+    frameworks: [
+      'browserify',
+      'mocha',
+      'chai'
+    ],
 
     files: [
       'test/spec/**/*Spec.js'
@@ -17,8 +19,10 @@ module.exports = function(karma) {
 
     browsers: [ 'PhantomJS' ],
 
-    singleRun: false,
-    autoWatch: true,
+    browserNoActivityTimeout: 30000,
+
+    singleRun: true,
+    autoWatch: false,
 
     // browserify configuration
     browserify: {
@@ -26,4 +30,5 @@ module.exports = function(karma) {
       debug: true
     }
   });
+
 };
