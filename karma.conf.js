@@ -1,18 +1,19 @@
+var path = require('path');
+
 module.exports = function(karma) {
   karma.set({
 
     frameworks: [
-      'browserify',
       'mocha',
       'chai'
     ],
 
     files: [
-      'test/spec/**/*Spec.js'
+      'test/suite.js'
     ],
 
     preprocessors: {
-      'test/spec/**/*Spec.js': [ 'browserify' ]
+      'test/suite.js': [ 'webpack' ]
     },
 
     reporters: [ 'dots' ],
@@ -24,10 +25,22 @@ module.exports = function(karma) {
     singleRun: true,
     autoWatch: false,
 
-    // browserify configuration
-    browserify: {
-      transform: [ 'brfs' ],
-      debug: true
+    webpack: {
+      mode: 'development',
+      module: {
+        rules: [
+          {
+            test: /(\.css|\.bpmn)$/,
+            use: 'raw-loader'
+          }
+        ]
+      },
+      resolve: {
+        modules: [
+          'node_modules',
+          path.resolve(__dirname)
+        ]
+      }
     }
   });
 

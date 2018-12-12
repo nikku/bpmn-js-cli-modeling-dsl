@@ -1,24 +1,22 @@
-'use strict';
+import {
+  bootstrapModeler,
+  inject
+} from '../TestHelper';
 
-require('../test-helper');
+import modelingModule from 'bpmn-js/lib/features/modeling';
+import coreModule from 'bpmn-js/lib/core';
 
-/* global bootstrapModeler, inject */
-
-var fs = require('fs');
-
-var modelingModule = require('bpmn-js/lib/features/modeling'),
-    coreModule = require('bpmn-js/lib/core'),
-    cliModelModule = require('../../');
+import modelModule from '../../';
 
 
-describe('cli', function() {
+describe('cli - model', function() {
 
-  var diagramXML = fs.readFileSync('resources/start.bpmn', 'utf-8');
+  var diagramXML = require('resources/start.bpmn');
 
   beforeEach(bootstrapModeler(diagramXML, {
     modules: [
       coreModule,
-      cliModelModule,
+      modelModule,
       modelingModule
     ]
   }));
