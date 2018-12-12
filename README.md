@@ -1,3 +1,6 @@
+> As of version `1.0.0` this library exposes [ES modules](http://exploringjs.com/es6/ch_modules.html#sec_basics-of-es6-modules). Use an ES module aware bundler such as [Webpack](https://webpack.js.org) or [Rollup](https://rollupjs.org) to bundle it for the browser.
+
+
 # bpmn-js-cli-modeling-dsl
 
 [![Build Status](https://travis-ci.org/nikku/bpmn-js-cli-modeling-dsl.svg?branch=master)](https://travis-ci.org/nikku/bpmn-js-cli-modeling-dsl)
@@ -13,7 +16,7 @@ To model this process:
 
 ![example BPMN diagram](./resources/model.png)
 
-simply execut the following command
+simply execute the following command
 
 ```
 cli.model('StartEvent_1 -> and -> service -> user -> icatch -> xor -> or -> ithrow -> end');
@@ -53,13 +56,16 @@ Use any of the aliases instead of the full qualified BPMN name.
 Deploy the cli-extension with [bpmn-js](https://github.com/bpmn-io/bpmn-js):
 
 ```
-var BpmnModeler = require('bpmn-js/lib/Modeler'),
-    ModelingDslModule = require('bpmn-js-cli-modeling-dsl');
+import BpmnModeler from 'bpmn-js/lib/Modeler';
+import ModelingDslModule from 'bpmn-js-cli-modeling-dsl';
 
 var modeler = new BpmnModeler({
-  container: document.body,
-  additionalModules: [ ModelingDslModule ],
-  cli: { bindTo: 'cli' }
+  additionalModules: [
+    ModelingDslModule
+  ],
+  cli: {
+    bindTo: 'cli'
+  }
 });
 
 modeler.importXML('some-bpmn-xml');
