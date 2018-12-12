@@ -18,7 +18,7 @@ To model this process:
 
 simply execute the following command
 
-```
+```javascript
 cli.model('StartEvent_1 -> and -> service -> user -> icatch -> xor -> or -> ithrow -> end');
 ```
 
@@ -29,7 +29,7 @@ You may use the full classified name of any BPMN element such as `bpmn:ServiceTa
 
 A number of aliases are registered for most commonly modeled BPMN elements:
 
-```
+```javascript
 var aliases = {
   service:     'bpmn:ServiceTask',
   user:        'bpmn:UserTask',
@@ -55,7 +55,7 @@ Use any of the aliases instead of the full qualified BPMN name.
 
 Deploy the cli-extension with [bpmn-js](https://github.com/bpmn-io/bpmn-js):
 
-```
+```javascript
 import BpmnModeler from 'bpmn-js/lib/Modeler';
 import ModelingDslModule from 'bpmn-js-cli-modeling-dsl';
 
@@ -76,7 +76,7 @@ Access the cli as `cli` in your developer console (open via `F12` in most browse
 
 Create a simple process from `<start>` via
 
-```
+```javascript
 cli.model('<start> -> and -> service -> user -> icatch -> xor -> or -> ithrow -> end');
 ```
 
