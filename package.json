@@ -20,8 +20,8 @@
   "author": "Nico Rehwaldt<git_nikku@nixis.de>",
   "license": "MIT",
   "devDependencies": {
-    "bpmn-js": "^0.26.6",
-    "bpmn-js-cli": "^0.16.3",
+    "bpmn-js": "^3.0.4",
+    "bpmn-js-cli": "^1.0.0",
     "brfs": "^1.2.0",
     "browserify": "^15.2.0",
     "chai": "^4.1.2",
@@ -45,8 +45,8 @@
     "lodash": "^3.0.0"
   },
   "peerDependencies": {
-    "bpmn-js": ">=0.26",
-    "bpmn-js-cli": ">= 0.16"
+    "bpmn-js": "^1.x || ^2.x || ^3.x",
+    "bpmn-js-cli": "^1.x"
   },
   "browser": {
     "fs": false
