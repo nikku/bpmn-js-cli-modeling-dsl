@@ -3,7 +3,7 @@
 
 # bpmn-js-cli-modeling-dsl
 
-[![Build Status](https://travis-ci.com/nikku/bpmn-js-cli-modeling-dsl.svg?branch=master)](https://travis-ci.com/nikku/bpmn-js-cli-modeling-dsl)
+[![CI](https://github.com/nikku/bpmn-js-cli-modeling-dsl/actions/workflows/CI.yml/badge.svg)](https://github.com/nikku/bpmn-js-cli-modeling-dsl/actions/workflows/CI.yml)
 
 A modeling DSL (domain specific language) for [bpmn-js](https://github.com/bpmn-io/bpmn-js), built on top of [bpmn-js-cli](https://github.com/bpmn-io/bpmn-js-cli).
 
